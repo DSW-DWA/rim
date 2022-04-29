@@ -1,6 +1,8 @@
+
 <div class="review-wapper"> 
     <ul class="list-wapper">
         <li class="list-wapper-item" *ngFor = "let vacan of vacancies" (click)="RetItem(vacan)"  >{{vacan.name}}</li>
+        <button class="list-wapper-button" (click)="adData()">Загрузить ещёя</button>
     </ul>
     <app-vacancy-info [showItem]="showItem" ></app-vacancy-info>
 </div>

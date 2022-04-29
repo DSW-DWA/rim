@@ -1,12 +1,15 @@
 app-vacancy-info{
   overflow:overlay;
   padding:15px;
+  width: 100%
 }
+
 .review-wapper{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 100%;
+  width: 100%;
 }
 .list-wapper {
   margin: 0;
