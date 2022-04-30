@@ -8,13 +8,13 @@ import { Vacancy } from '../vacancy';
 })
 export class VacancyInfoComponent implements OnInit {
   @Input() showItem!: Vacancy;
-
   salar(item: Vacancy){
     if (item.salary == null) return "Не указана";
     else return item.salary;
   }
+  check(){
+  }
   constructor() {
-
   }
   ngOnInit(): void {
   }

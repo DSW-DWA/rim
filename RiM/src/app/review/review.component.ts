@@ -27,19 +27,23 @@ export class ReviewComponent implements OnInit {
     ],
     alternate_url: "string"
   };
+  condit:boolean = true;
+  //return Vacancy
   RetItem(item: Vacancy){
     this.showItem = item;
   }
+  // upload data from server
   ngOnInit() {
     this.con.getData().subscribe(data =>{
       this.vacancies = data;
-      //console.log(this.vacancies);
+      this.condit = false;
+      this.showItem = this.vacancies[0];
     })
   }
+  // upload data if you pres the btn
   adData(){
     this.con.getData().subscribe(data =>{
       this.vacancies= [...this.vacancies, ...Object.values(data)];
-      //console.log();
     })
   }
 }
