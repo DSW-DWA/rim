@@ -13,7 +13,8 @@ export class VacancyInfoComponent implements OnInit {
     else return item.salary;
   }
   check(item: Vacancy){
-
+    let tmp: number = item.key_skills.length; 
+    return tmp != 0;
   }
   constructor() {
   }
