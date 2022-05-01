@@ -12,7 +12,8 @@ export class VacancyInfoComponent implements OnInit {
     if (item.salary == null) return "Не указана";
     else return item.salary;
   }
-  check(){
+  check(item: Vacancy){
+
   }
   constructor() {
   }

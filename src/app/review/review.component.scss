@@ -1,3 +1,4 @@
+
 app-vacancy-info{
   overflow:overlay;
   padding:15px;
@@ -54,6 +55,8 @@ app-vacancy-info{
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+
+//list style 
 .list-wapper-item {
   list-style: none;
   color: #FFFFFF;
@@ -68,8 +71,11 @@ app-vacancy-info{
   background-color: #5E5E5E;
   cursor: pointer;
 }
+
+// style of buttn "Загрузить ещё"
 .list-wapper-button{
   width: 100%;
+  height: 25px;
   background-color: #373737;
   border: none;
   color: white;
@@ -77,6 +83,10 @@ app-vacancy-info{
   text-decoration: none;
   font-size: 12px;
   padding: 0 10px;
+}
+.list-wapper-button:hover{
+  background-color: #5E5E5E;
+  cursor: pointer;
 }
 @keyframes disappear{
   0%{

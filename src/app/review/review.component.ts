@@ -11,6 +11,8 @@ import { Vacancy } from '../vacancy';
 export class ReviewComponent implements OnInit {
 
   vacancies!: any;
+  choseItem: number = 0;
+  bgColor: string = "#5E5E5E";
 
   constructor(private con:ConService) { 
   }
@@ -28,9 +30,13 @@ export class ReviewComponent implements OnInit {
     alternate_url: "string"
   };
   condit:boolean = true;
-  //return Vacancy
-  RetItem(item: Vacancy){
+  //return Vacancy and index
+  RetItem(item: Vacancy, i: number){
     this.showItem = item;
+    this.choseItem = i;
+  }
+  check(i: number){
+    return this.choseItem == i;
   }
   // upload data from server
   ngOnInit() {
@@ -38,6 +44,7 @@ export class ReviewComponent implements OnInit {
       this.vacancies = data;
       this.showItem = this.vacancies[0];
     })
+    // time for animation 
     setTimeout(()=>{
       this.condit = false;
     },2000);

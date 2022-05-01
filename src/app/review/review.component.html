@@ -2,7 +2,7 @@
 <ng-template #elseblock>
     <div class="review-wapper" > 
         <ul class="list-wapper">
-            <li class="list-wapper-item" *ngFor = "let vacan of vacancies" (click)="RetItem(vacan)"  >{{vacan.name}}</li>
+            <li class="list-wapper-item {{i}}" *ngFor = "let vacan of vacancies; index as i" (click)="RetItem(vacan,i)" [ngStyle]="{'background-color':check(i) ? bgColor: ''}">{{vacan.name}}</li>
             <button class="list-wapper-button" (click)="adData()">Загрузить ещё</button>
         </ul>
         <app-vacancy-info [showItem]="showItem" ></app-vacancy-info>

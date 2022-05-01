@@ -32,17 +32,19 @@
         font-size: 24px;
         line-height: 29px;
         &-wapper{
-            display: flex;
-            flex-direction: row;
+            display: grid;
+            /* flex-direction: row; */
+            grid-template-columns: repeat(8, 1fr);
         }
         &-item{
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 2.5px;
-            margin: 20px 10px 0 0;
+            margin: 5px;
             padding: 5px 8px;
             background: #EDEDED;
+            white-space: nowrap;
         }
     }
 }

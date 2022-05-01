@@ -1,9 +1,11 @@
 
-    <div class="vacancy-name"><a href="{{showItem.alternate_url}}" target="_blank">{{showItem.name}}</a></div>
-    <div class="vacancy-salary" (click)="check()">Зп: {{salar(showItem)}}</div>
-    <div class="vacancy-ext_inf">{{showItem.experience}}, {{showItem.area}}</div>
-    <div [innerHtml]="showItem.description" class="vacancy-description"></div>
+<div class="vacancy-name"><a href="{{showItem.alternate_url}}" target="_blank">{{showItem.name}}</a></div>
+<div class="vacancy-salary" >Зп: {{salar(showItem)}}</div>
+<div class="vacancy-ext_inf">{{showItem.experience}}, {{showItem.area}}</div>
+<div [innerHtml]="showItem.description" class="vacancy-description"></div>
+<ng-template *ngIf="">
     <div class="vacancy-key_skills">Ключевые навыки</div>
     <div class="vacancy-key_skills-wapper">
         <div *ngFor="let skill of showItem.key_skills" class="vacancy-key_skills-item">{{skill}}</div>
     </div>
+</ng-template>
