@@ -33,7 +33,6 @@
         line-height: 29px;
         &-wapper{
             display: grid;
-            /* flex-direction: row; */
             grid-template-columns: repeat(8, 1fr);
         }
         &-item{
@@ -44,7 +43,6 @@
             margin: 5px;
             padding: 5px 8px;
             background: #EDEDED;
-            white-space: nowrap;
         }
     }
 }

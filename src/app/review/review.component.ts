@@ -13,6 +13,7 @@ export class ReviewComponent implements OnInit {
   vacancies!: any;
   choseItem: number = 0;
   bgColor: string = "#5E5E5E";
+  uploadCondit: boolean = true;
 
   constructor(private con:ConService) { 
   }
@@ -35,6 +36,7 @@ export class ReviewComponent implements OnInit {
     this.showItem = item;
     this.choseItem = i;
   }
+  //inicelization chooding element
   check(i: number){
     return this.choseItem == i;
   }
@@ -51,8 +53,10 @@ export class ReviewComponent implements OnInit {
   }
   // upload data if you pres the btn
   adData(){
+    this.uploadCondit = false;
     this.con.getData().subscribe(data =>{
       this.vacancies= [...this.vacancies, ...Object.values(data)];
+      this.uploadCondit = true;
     })
   }
 }

@@ -2,8 +2,12 @@
 app-vacancy-info{
   overflow:overlay;
   padding:15px;
-  width: 100%
+  width: 100%;
+  animation-name: arppeance;
+  animation-duration: 100ms;
+  animation-fill-mode: forwards;
 }
+
 .review-load{
   display: flex;
   justify-content: center;
@@ -34,6 +38,27 @@ app-vacancy-info{
   background-color: #373737; 
   min-width: 21%;
   max-width: 21%;
+}
+.list-wapper-elseblock{
+  margin: 0;
+  padding: 0;
+  overflow:overlay;
+  background-color: #373737; 
+  min-width: 21%;
+  max-width: 21%;
+  &-item{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: #5E5E5E;
+    animation-name: disappear;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+    
+  }
 }
 
 ::-webkit-scrollbar {

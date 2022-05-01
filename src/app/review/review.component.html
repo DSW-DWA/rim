@@ -1,10 +1,15 @@
 <div class="review-load" *ngIf="condit; else elseblock">Загрузка...</div>
 <ng-template #elseblock>
-    <div class="review-wapper" > 
-        <ul class="list-wapper">
+    <div class="review-wapper" >
+        <ul class="list-wapper" *ngIf="uploadCondit; else elseblock">
             <li class="list-wapper-item {{i}}" *ngFor = "let vacan of vacancies; index as i" (click)="RetItem(vacan,i)" [ngStyle]="{'background-color':check(i) ? bgColor: ''}">{{vacan.name}}</li>
             <button class="list-wapper-button" (click)="adData()">Загрузить ещё</button>
         </ul>
+        <ng-template #elseblock>
+            <div class="list-wapper-elseblock">
+                <div class="list-wapper-elseblock-item">Обновление списка...</div>
+            </div>
+        </ng-template>
         <app-vacancy-info [showItem]="showItem" ></app-vacancy-info>
     </div>
 </ng-template>
