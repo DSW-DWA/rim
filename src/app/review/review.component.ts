@@ -36,9 +36,11 @@ export class ReviewComponent implements OnInit {
   ngOnInit() {
     this.con.getData().subscribe(data =>{
       this.vacancies = data;
-      this.condit = false;
       this.showItem = this.vacancies[0];
     })
+    setTimeout(()=>{
+      this.condit = false;
+    },2000);
   }
   // upload data if you pres the btn
   adData(){

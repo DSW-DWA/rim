@@ -3,13 +3,28 @@ app-vacancy-info{
   padding:15px;
   width: 100%
 }
-
+.review-load{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #373737;
+  color: #FFFFFF;
+  animation-name: disappear;
+  animation-duration: 2000ms;
+  animation-fill-mode: forwards;
+}
 .review-wapper{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 100%;
   width: 100%;
+  animation-name: arppeance;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
 }
 .list-wapper {
   margin: 0;
@@ -53,6 +68,42 @@ app-vacancy-info{
   background-color: #5E5E5E;
   cursor: pointer;
 }
-
+.list-wapper-button{
+  width: 100%;
+  background-color: #373737;
+  border: none;
+  color: white;
+  text-align: start;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 0 10px;
+}
+@keyframes disappear{
+  0%{
+    opacity: 1;
+    transform: rotateX(90deg);
+  }
+  50%{
+    opacity: 0.5;
+    transform: rotateX(0deg);
+  }
+  100%{
+    display: none;
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+}
+@keyframes arppeance{
+  0%{
+    display: none;
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 
 

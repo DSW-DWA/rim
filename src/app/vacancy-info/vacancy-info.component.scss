@@ -46,3 +46,19 @@
         }
     }
 }
+a {
+    text-decoration: none;
+}
+a:link{
+    color: black;
+}
+a:visited{
+    color: #6d6565;
+}
+a:focus {
+    background: #c6ccc1;
+}
+
+a:hover {
+    background: #c1c5be;
+}
