@@ -14,8 +14,9 @@ export class ReviewComponent implements OnInit {
   choseItem: number = 0;
   bgColor: string = "#5E5E5E";
   uploadCondit: boolean = true;
+  shadow: string = "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))";
 
-  constructor(private con:ConService) { 
+  constructor(private con:ConService) {
   }
 
   showItem: Vacancy= {

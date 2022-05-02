@@ -34,10 +34,29 @@ app-vacancy-info{
 .list-wapper {
   margin: 0;
   padding: 0;
-  overflow:overlay;
+  overflow-y:overlay;
+  overflow-x: hidden;
   background-color: #373737; 
-  min-width: 21%;
-  max-width: 21%;
+  width: 21%;
+  &-item{
+    list-style: none;
+    color: #FFFFFF;
+    font-weight: 200;
+    height: 25px;
+    line-height: 25px;
+    width: 100%;
+    display: block;
+    text-indent: 10px;
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  &-item:hover{
+    background-color: #5E5E5E;
+    cursor: pointer;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
 }
 .list-wapper-elseblock{
   margin: 0;
@@ -57,7 +76,6 @@ app-vacancy-info{
     animation-name: disappear;
     animation-duration: 2000ms;
     animation-fill-mode: forwards;
-    
   }
 }
 
@@ -81,21 +99,6 @@ app-vacancy-info{
   background: #555; 
 }
 
-//list style 
-.list-wapper-item {
-  list-style: none;
-  color: #FFFFFF;
-  padding-left: 10px;
-  font-weight: 200;
-  height: 25px;
-  display: flex;
-  align-items: center;
-  font-size: 12px;
-}
-.list-wapper-item:hover{
-  background-color: #5E5E5E;
-  cursor: pointer;
-}
 
 // style of buttn "Загрузить ещё"
 .list-wapper-button{

@@ -33,7 +33,7 @@
         line-height: 29px;
         &-wapper{
             display: grid;
-            grid-template-columns: repeat(8, 1fr);
+            grid-template-columns: repeat(7, 95px);
         }
         &-item{
             display: flex;
