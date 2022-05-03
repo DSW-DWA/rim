@@ -1,4 +1,12 @@
-<div class="review-load" *ngIf="condit; else elseblock">Загрузка...</div>
+<div class="visual-load" *ngIf="condit; else elseblock">Загрузка...</div>
 <ng-template #elseblock>
-    <p>work</p>
+    <div class="visual-wapper">
+        <div class="visual-wapper-name">
+            <div class="visual-wapper-name-item"><strong>Backend</strong> work stats</div>
+        </div>
+        <div class="visual-wapper-infobar-item"></div>
+        <div class="visual-wapper-infobar-item"></div>
+        <div class="visual-wapper-infobar-item"></div>
+        <div class="visual-wapper-infobar-item"></div>
+    </div>
 </ng-template>

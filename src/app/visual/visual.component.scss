@@ -1,28 +1,68 @@
-.review-load{
+.visual-load{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #373737;
+  color: #FFFFFF;
+  animation-name: disappear;
+  animation-duration: 2000ms;
+  animation-fill-mode: forwards;
+}
+.visual-wapper{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-auto-rows: 80px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  animation-name: arppeance;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+  &-name{
+    grid-column-start: 1;
+    grid-column-end: 5;
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 50px;
-    border-radius: 5px;
-    background-color: #373737;
-    color: #FFFFFF;
-    animation-name: disappear;
-    animation-duration: 2000ms;
-    animation-fill-mode: forwards;
-  }
-  @keyframes disappear{
-    0%{
-      opacity: 1;
-      transform: rotateX(90deg);
-    }
-    50%{
-      opacity: 0.5;
-      transform: rotateX(0deg);
-    }
-    100%{
-      display: none;
-      opacity: 0;
-      transform: rotateX(90deg);
+    padding-left: 10px;
+    font-size: 48px;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    &-item{
+      display: block;
     }
   }
+  &-infobar-item{
+    border: 1px solid #C4C4C4;
+  }
+}
+@keyframes disappear{
+  0%{
+    opacity: 1;
+    transform: rotateX(90deg);
+  }
+  50%{
+    opacity: 0.5;
+    transform: rotateX(0deg);
+  }
+  100%{
+    display: none;
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+}
+@keyframes arppeance{
+  0%{
+    display: none;
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
+}
