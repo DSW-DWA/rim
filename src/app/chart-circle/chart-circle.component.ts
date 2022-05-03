@@ -44,11 +44,11 @@ export class ChartCircleComponent implements OnInit {
           show: false
         },
         data: [
-          { value: 1048, name: 'Search Engine' },
-          { value: 735, name: 'Direct' },
-          { value: 580, name: 'Email' },
-          { value: 484, name: 'Union Ads' },
-          { value: 300, name: 'Video Ads' }
+          { value: 1048, name: 'Nodejs' },
+          { value: 735, name: 'Python' },
+          { value: 580, name: 'C#' },
+          { value: 484, name: 'Java' },
+          { value: 300, name: 'PHP' }
         ]
       }
     ]

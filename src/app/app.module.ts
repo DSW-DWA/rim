@@ -12,6 +12,7 @@ import { VisualComponent } from './visual/visual.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { ChartCircleComponent } from './chart-circle/chart-circle.component';
 import { ChartBarFirstComponent } from './chart-bar-first/chart-bar-first.component';
+import { ChartLineComponent } from './chart-line/chart-line.component';
 
 
 const appRoutes: Routes = [
@@ -28,6 +29,7 @@ const appRoutes: Routes = [
     VisualComponent,
     ChartCircleComponent,
     ChartBarFirstComponent,
+    ChartLineComponent,
   ],
   imports: [
     BrowserModule,
