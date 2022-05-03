@@ -1,1 +1,4 @@
-<p>visual works!</p>
+<div class="review-load" *ngIf="condit; else elseblock">Загрузка...</div>
+<ng-template #elseblock>
+    <p>work</p>
+</ng-template>
