@@ -32,7 +32,10 @@
     border: 1px solid #C4C4C4;
     box-sizing: border-box;
     &-item{
-      display: block;
+      strong {
+        border-right: solid 5px #232828;
+        margin-right: 10px;
+      }
     }
   }
   &-infobar-item{
