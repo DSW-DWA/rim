@@ -9,6 +9,8 @@ import { ReviewComponent } from './review/review.component';
 
 import { VacancyInfoComponent } from './vacancy-info/vacancy-info.component';
 import { VisualComponent } from './visual/visual.component';
+import { NgxEchartsModule } from 'ngx-echarts';
+import { ChartCircleComponent } from './visual/chart-circle/chart-circle.component';
 
 
 const appRoutes: Routes = [
@@ -23,11 +25,15 @@ const appRoutes: Routes = [
     ReviewComponent,
     VacancyInfoComponent,
     VisualComponent,
+    ChartCircleComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts'),
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
