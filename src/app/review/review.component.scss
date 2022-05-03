@@ -63,8 +63,7 @@ app-vacancy-info{
   padding: 0;
   overflow:overlay;
   background-color: #373737; 
-  min-width: 21%;
-  max-width: 21%;
+  width: 21%;
   &-item{
     width: 100%;
     height: 100%;
@@ -104,6 +103,9 @@ app-vacancy-info{
 .list-wapper-button{
   width: 100%;
   height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #373737;
   border: none;
   color: white;
