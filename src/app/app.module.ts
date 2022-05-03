@@ -10,7 +10,7 @@ import { ReviewComponent } from './review/review.component';
 import { VacancyInfoComponent } from './vacancy-info/vacancy-info.component';
 import { VisualComponent } from './visual/visual.component';
 import { NgxEchartsModule } from 'ngx-echarts';
-import { ChartCircleComponent } from './visual/chart-circle/chart-circle.component';
+import { ChartCircleComponent } from './chart-circle/chart-circle.component';
 
 
 const appRoutes: Routes = [
