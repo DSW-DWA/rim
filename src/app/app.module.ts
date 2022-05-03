@@ -11,6 +11,7 @@ import { VacancyInfoComponent } from './vacancy-info/vacancy-info.component';
 import { VisualComponent } from './visual/visual.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { ChartCircleComponent } from './chart-circle/chart-circle.component';
+import { ChartBarFirstComponent } from './chart-bar-first/chart-bar-first.component';
 
 
 const appRoutes: Routes = [
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
     VacancyInfoComponent,
     VisualComponent,
     ChartCircleComponent,
+    ChartBarFirstComponent,
   ],
   imports: [
     BrowserModule,
