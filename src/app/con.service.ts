@@ -10,4 +10,20 @@ export class ConService {
     let url = 'http://api.utmn.su/api/vacancies/';
     return this.http.get(url);
   }
+  getDataForPieChart(){
+    let url = "http://api.utmn.su/api/charts/skills_demand/";
+    return this.http.get(url);
+  }
+  getDataForBarChart(){
+    let url = "http://api.utmn.su/api/charts/skills_demand/";
+    return this.http.get(url);
+  }
+  getDataForLineChart(){
+    let url = "http://api.utmn.su/api/charts/experience_salary";
+    return this.http.get(url);
+  }
+  getDataForPreviewInfo(){
+    let url = "http://api.utmn.su/api/charts/preview_info";
+    return this.http.get(url);
+  }
 }
