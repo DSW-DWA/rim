@@ -11,6 +11,7 @@ export class VisualComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
     setTimeout(() => {this.condit = false} , 2000);
   }
 

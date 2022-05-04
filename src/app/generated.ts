@@ -1,4 +1,4 @@
-import {Vacancy} from "./vacancy";
+import {Vacancy} from "./interfaces";
 
 // create and export array of vacancy
 export  let VACANCIES: Vacancy[];

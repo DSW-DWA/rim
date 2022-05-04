@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ConService } from '../con.service';
 // import data
-import { Vacancy } from '../vacancy';
+import { Vacancy } from '../interfaces';
 
 @Component({
   selector: 'app-review',

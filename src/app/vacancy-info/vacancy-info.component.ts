@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Vacancy } from '../vacancy';
+import { Vacancy } from '../interfaces';
 
 @Component({
   selector: 'app-vacancy-info',

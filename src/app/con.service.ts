@@ -15,7 +15,7 @@ export class ConService {
     return this.http.get(url);
   }
   getDataForBarChart(){
-    let url = "http://api.utmn.su/api/charts/skills_demand/";
+    let url = "http://api.utmn.su/api/charts/skills_salary/";
     return this.http.get(url);
   }
   getDataForLineChart(){
