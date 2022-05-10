@@ -14,6 +14,7 @@ import { ChartCircleComponent } from './chart-circle/chart-circle.component';
 import { ChartBarFirstComponent } from './chart-bar-first/chart-bar-first.component';
 import { ChartLineComponent } from './chart-line/chart-line.component';
 import { ChartMapComponent } from './chart-map/chart-map.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 const appRoutes: Routes = [
@@ -40,6 +41,7 @@ const appRoutes: Routes = [
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts'),
     }),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
