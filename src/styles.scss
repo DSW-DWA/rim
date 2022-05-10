@@ -1,5 +1,6 @@
 //inter fonts import
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@400;500&display=swap');
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 /* You can add global styles to this file, and also import other style files */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -374,6 +375,10 @@ app-visual{
     justify-content: center;
     align-items: center;
     padding: 10px;
+    overflow: overlay;
+}
+app-table{
+    width: 100%;
     overflow: overlay;
 }
 ::-webkit-scrollbar {

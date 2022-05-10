@@ -10,7 +10,7 @@ import { Vacancy } from '../interfaces';
 })
 export class ReviewComponent implements OnInit {
 
-  vacancies!: any;
+  vacancies!: Vacancy[];
   choseItem: number = 0;
   bgColor: string = "#5E5E5E";
   uploadCondit: boolean = true;

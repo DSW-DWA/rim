@@ -15,11 +15,17 @@ import { ChartBarFirstComponent } from './chart-bar-first/chart-bar-first.compon
 import { ChartLineComponent } from './chart-line/chart-line.component';
 import { ChartMapComponent } from './chart-map/chart-map.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TableComponent } from './table/table.component';
 
+import {MatTableModule} from '@angular/material/table';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
 
 const appRoutes: Routes = [
   {path: 'review', component: ReviewComponent},
   {path: 'visual', component: VisualComponent},
+  {path: 'table', component: TableComponent}
 ]
 
 @NgModule({
@@ -33,6 +39,7 @@ const appRoutes: Routes = [
     ChartBarFirstComponent,
     ChartLineComponent,
     ChartMapComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +49,10 @@ const appRoutes: Routes = [
       echarts: () => import('echarts'),
     }),
     BrowserAnimationsModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
