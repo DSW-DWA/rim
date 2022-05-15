@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Vacancy } from './interfaces'
+import { Vacancy } from './interfaces';
+import { PrewInfo } from './interfaces';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -25,6 +27,6 @@ export class ConService {
   }
   getDataForPreviewInfo(){
     let url = "http://api.utmn.su/api/charts/preview_info";
-    return this.http.get(url);
+    return this.http.get<PrewInfo>(url);
   }
 }

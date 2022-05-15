@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ConService } from '../con.service';
+import { PrewInfo } from '../interfaces';
 
 @Component({
   selector: 'app-visual',
@@ -7,11 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VisualComponent implements OnInit {
   condit: boolean = true;
+  mainInfo!: PrewInfo;
 
-  constructor() { }
+  constructor(private con:ConService) { }
 
   ngOnInit(): void {
-    
+    this.con.getDataForPreviewInfo().subscribe(data =>{
+      this.mainInfo = data;
+    })
     setTimeout(() => {this.condit = false} , 2000);
   }
 
