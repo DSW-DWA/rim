@@ -12,11 +12,9 @@
   animation-fill-mode: forwards;
 }
 .visual-wapper{
-  width: 100%;
-  height: 100%;
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  grid-auto-rows: 80px;
+  grid-template-rows: repeat(8,1fr);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   animation-name: arppeance;
@@ -25,6 +23,8 @@
   &-name{
     grid-column-start: 1;
     grid-column-end: 5;
+    grid-row-start:1 ;
+    grid-row-end: 2;
     display: flex;
     align-items: center;
     padding-left: 10px;
@@ -45,26 +45,40 @@
     justify-content: center;
     align-items: center;
     &-main{
-      font-weight: 700;
       font-size: 24px;
     }
     &-info{
       font-size: 10px;
     }
   }
-  &-charts{
+  &-charts-item{
+      border: 1px solid #C4C4C4;
+  }
+}
+.item{
+  &-1{
     grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 6;
+  }
+  &-2{
+    grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 3;
+    grid-row-end: 6;
+  }
+  &-3{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 6;
     grid-row-end: 9;
-    display: grid;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 255px;
-    &-item{
-      border: 1px solid #C4C4C4;
-    }
+  }
+  &-4{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 9;
   }
 }
 @keyframes disappear{
