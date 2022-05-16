@@ -19,18 +19,7 @@ export class ReviewComponent implements OnInit {
   constructor(private con:ConService) {
   }
 
-  showItem: Vacancy= {
-    id: -1,
-    name: "string",
-    area: "string",
-    salary: 3242,
-    experience: "string",
-    description: "string",
-    key_skills: [
-    "string"
-    ],
-    alternate_url: "string"
-  };
+  showItem!: Vacancy;
   condit:boolean = true;
   //return Vacancy and index
   RetItem(item: Vacancy, i: number){
