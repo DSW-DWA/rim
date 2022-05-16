@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Vacancy } from './interfaces';
 import { PrewInfo } from './interfaces';
 
@@ -11,6 +11,10 @@ export class ConService {
   constructor(private http: HttpClient) { }
   getData(){
     let url = 'http://api.utmn.su/api/vacancies/';
+    return this.http.get<Vacancy[]>(url);
+  }
+  getMoreData(value: number) {
+    let url = 'https://api.utmn.su/api/vacancies/?offset=' + value;
     return this.http.get<Vacancy[]>(url);
   }
   getDataForPieChart(){

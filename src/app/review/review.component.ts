@@ -44,7 +44,7 @@ export class ReviewComponent implements OnInit {
   // upload data if you pres the btn
   adData(){
     this.uploadCondit = false;
-    this.con.getData().subscribe(data =>{
+    this.con.getMoreData((this.vacancies.length/100)).subscribe(data =>{
       this.vacancies= [...this.vacancies, ...Object.values(data)];
       this.uploadCondit = true;
     })
