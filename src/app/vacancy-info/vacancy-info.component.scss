@@ -32,8 +32,8 @@
         font-size: 24px;
         line-height: 29px;
         &-wapper{
-            display: grid;
-            grid-template-columns: repeat(7, 95px);
+            display: flex;
+            flex-wrap: wrap;
         }
         &-item{
             display: flex;
