@@ -21,9 +21,16 @@ export class ChartBarFirstComponent implements OnInit {
         yAxis: {
           type: 'value'
         },
+        grid: {
+          left: '3%',
+          right: '4%',
+          bottom: '3%',
+          containLabel: true
+        },
         series: [
           {
             data: data.salary,
+            barWidth: '60%',
             type: 'bar'
           }
         ],

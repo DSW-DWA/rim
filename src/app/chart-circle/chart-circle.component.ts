@@ -17,6 +17,12 @@ export class ChartCircleComponent implements OnInit {
         tooltip: {
           trigger: 'item'
         },
+        grid: {
+          left: '3%',
+          right: '4%',
+          bottom: '3%',
+          containLabel: true
+        },
         color:[
           "#adadad",
           "#878787",
@@ -33,7 +39,7 @@ export class ChartCircleComponent implements OnInit {
             emphasis: {
               label: {
                 show: true,
-                fontSize: '25',
+                fontSize: '22',
                 fontWeight: 'bold'
               }
             },

@@ -21,6 +21,12 @@ export class ChartLineComponent implements OnInit {
         yAxis: {
           type: 'value',
         },
+        grid: {
+          left: '3%',
+          right: '4%',
+          bottom: '3%',
+          containLabel: true
+        },
         series: [
           {
             data: data.avr_salary,
