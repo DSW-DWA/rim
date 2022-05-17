@@ -10,27 +10,25 @@ import { environment } from '../environments/environment';
 export class ConService {
   constructor(private http: HttpClient) {}
   getData() {
-    let url = `${environment.apiUrl}api/vacancies/`;
-    return this.http.get<Vacancy[]>(url);
+    return this.http.get<Vacancy[]>(`${environment.apiUrl}api/vacancies`);
   }
   getMoreData(offset: number) {
-    let url = `${environment.apiUrl}api/vacancies/?offset=${offset}`;
-    return this.http.get<Vacancy[]>(url);
+    return this.http.get<Vacancy[]>(
+      `${environment.apiUrl}api/vacancies?offset=${offset}`
+    );
   }
   getDataForPieChart() {
-    let url = `${environment.apiUrl}api/charts/skills_demand/`;
-    return this.http.get(url);
+    return this.http.get(`${environment.apiUrl}api/charts/skills_demand`);
   }
   getDataForBarChart() {
-    let url = `${environment.apiUrl}api/charts/skills_salary/`;
-    return this.http.get(url);
+    return this.http.get(`${environment.apiUrl}api/charts/skills_salary`);
   }
   getDataForLineChart() {
-    let url = `${environment.apiUrl}api/charts/experience_salary`;
-    return this.http.get(url);
+    return this.http.get(`${environment.apiUrl}api/charts/experience_salary`);
   }
   getDataForPreviewInfo() {
-    let url = `${environment.apiUrl}api/charts/preview_info`;
-    return this.http.get<PrewInfo>(url);
+    return this.http.get<PrewInfo>(
+      `${environment.apiUrl}api/charts/preview_info`
+    );
   }
 }

@@ -1,6 +1,6 @@
 
 <div class="vacancy-name"><a href="{{showItem.alternate_url}}" target="_blank">{{showItem.name}}</a></div>
-<div class="vacancy-salary">Зп: {{salar(showItem)}}</div>
+<div class="vacancy-salary">Зп: {{salary(showItem)}}</div>
 <div class="vacancy-ext_inf">{{showItem.experience}}, {{showItem.area}}</div>
 <div [innerHtml]="showItem.description" class="vacancy-description"></div>
 <div *ngIf="check(showItem)">

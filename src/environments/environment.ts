@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://api.utmn.su/',
+  // apiUrl: 'http://api.utmn.su/',
+  apiUrl: 'http://localhost:8000/',
 };
 
 /*

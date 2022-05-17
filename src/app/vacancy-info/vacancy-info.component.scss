@@ -1,64 +1,64 @@
 .vacancy {
-    &-name{
-        font-style: normal;
-        font-weight: 500;
-        font-size: 36px;
-        line-height: 44px;
-        display: flex;
-        align-items: center;
+  &-name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  &-salary {
+    height: 29px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  &-ext_inf {
+    height: 31px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  &-description {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  &-key_skills {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    &-wapper {
+      display: flex;
+      flex-wrap: wrap;
     }
-    &-salary{
-        height: 29px;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      margin: 5px;
+      padding: 5px 8px;
+      background: #ececec;
     }
-    &-ext_inf{
-        height: 31px;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 15px;
-    }
-    &-description{
-        font-style: normal;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 15px;
-    }
-    &-key_skills{
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 29px;
-        &-wapper{
-            display: flex;
-            flex-wrap: wrap;
-        }
-        &-item{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 2.5px;
-            margin: 5px;
-            padding: 5px 8px;
-            background: #EDEDED;
-        }
-    }
+  }
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
-a:link{
-    color: black;
+a:link {
+  color: black;
 }
-a:visited{
-    color: #6d6565;
+a:visited {
+  color: #6d6565;
 }
 a:focus {
-    background: #c6ccc1;
+  background: #c6ccc1;
 }
 
 a:hover {
-    background: #c1c5be;
+  background: #c1c5be;
 }
