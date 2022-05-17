@@ -2,35 +2,35 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Vacancy } from './interfaces';
 import { PrewInfo } from './interfaces';
+import { environment } from '../environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ConService {
-
-  constructor(private http: HttpClient) { }
-  getData(){
-    let url = 'http://api.utmn.su/api/vacancies/';
+  constructor(private http: HttpClient) {}
+  getData() {
+    let url = `${environment.apiUrl}api/vacancies/`;
     return this.http.get<Vacancy[]>(url);
   }
-  getMoreData(value: number) {
-    let url = 'https://api.utmn.su/api/vacancies/?offset=' + value;
+  getMoreData(offset: number) {
+    let url = `${environment.apiUrl}api/vacancies/?offset=${offset}`;
     return this.http.get<Vacancy[]>(url);
   }
-  getDataForPieChart(){
-    let url = "http://api.utmn.su/api/charts/skills_demand/";
+  getDataForPieChart() {
+    let url = `${environment.apiUrl}api/charts/skills_demand/`;
     return this.http.get(url);
   }
-  getDataForBarChart(){
-    let url = "http://api.utmn.su/api/charts/skills_salary/";
+  getDataForBarChart() {
+    let url = `${environment.apiUrl}api/charts/skills_salary/`;
     return this.http.get(url);
   }
-  getDataForLineChart(){
-    let url = "http://api.utmn.su/api/charts/experience_salary";
+  getDataForLineChart() {
+    let url = `${environment.apiUrl}api/charts/experience_salary`;
     return this.http.get(url);
   }
-  getDataForPreviewInfo(){
-    let url = "http://api.utmn.su/api/charts/preview_info";
+  getDataForPreviewInfo() {
+    let url = `${environment.apiUrl}api/charts/preview_info`;
     return this.http.get<PrewInfo>(url);
   }
 }
