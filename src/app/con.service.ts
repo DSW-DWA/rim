@@ -18,7 +18,7 @@ export class ConService {
     return this.http.get<Vacancy[]>(url);
   }
   getDataForPieChart(){
-    let url = "http://api.utmn.su/api/charts/skills_demand";
+    let url = "http://api.utmn.su/api/charts/skills_demand/?limit=9";
     return this.http.get<PieChart[]>(url);
   }
   getDataForBarChart(){

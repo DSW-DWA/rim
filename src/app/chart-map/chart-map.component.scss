@@ -1,9 +1,20 @@
-.demo-chart {
-    height: 235px;
-}
+
 .name{
     height: 20px;
     line-height: 20px;
     font-size: 10px;
     text-align: center;
+}
+
+.state{
+    fill: blue;
+    stroke: white;
+      
+
+}
+.state:hover{
+    fill: red;
+    stroke: black;
+      
+
 }

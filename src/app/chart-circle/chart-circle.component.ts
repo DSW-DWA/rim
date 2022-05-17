@@ -17,11 +17,6 @@ export class ChartCircleComponent implements OnInit {
         tooltip: {
           trigger: 'item'
         },
-        legend: {
-          orient: 'vertical',
-          right: 10,
-          top: 'center'
-        },
         color:[
           "#adadad",
           "#878787",
@@ -35,10 +30,6 @@ export class ChartCircleComponent implements OnInit {
             type: 'pie',
             radius: ['50%', '70%'],
             avoidLabelOverlap: false,
-            label: {
-              show: false,
-              position: 'center'
-            },
             emphasis: {
               label: {
                 show: true,
