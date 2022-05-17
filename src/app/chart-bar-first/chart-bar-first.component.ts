@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EChartsOption } from 'echarts';
+import { ConService } from '../con.service';
 
 @Component({
   selector: 'app-chart-bar-first',
@@ -7,27 +8,30 @@ import { EChartsOption } from 'echarts';
   styleUrls: ['./chart-bar-first.component.scss']
 })
 export class ChartBarFirstComponent implements OnInit {
-  chartOption: EChartsOption = {
-    xAxis: {
-      type: 'category',
-      data: ['nodejs', 'Python', 'PHP', 'C#', 'SQL', 'JS', 'GIT']
-    },
-    yAxis: {
-      type: 'value'
-    },
-    series: [
-      {
-        data: [120, 200, 150, 80, 70, 110, 130],
-        type: 'bar'
-      }
-    ],
-    color:[
-      "#474747",
-    ],
-  };
-  constructor() { }
+  chartOption: EChartsOption = {};
+  constructor(private con: ConService) { }
 
   ngOnInit(): void {
+    this.con.getDataForBarChart().subscribe(data => {
+      this.chartOption = {
+        xAxis: {
+          type: 'category',
+          data: data.len_skills
+        },
+        yAxis: {
+          type: 'value'
+        },
+        series: [
+          {
+            data: data.salary,
+            type: 'bar'
+          }
+        ],
+        color:[
+          "#474747",
+        ],
+      }
+    });
   }
 
 }

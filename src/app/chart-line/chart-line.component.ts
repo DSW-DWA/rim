@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EChartsOption } from 'echarts';
+import { ConService } from '../con.service';
 @Component({
   selector: 'app-chart-line',
   templateUrl: './chart-line.component.html',
@@ -7,27 +8,30 @@ import { EChartsOption } from 'echarts';
 })
 export class ChartLineComponent implements OnInit {
 
-  chartOption: EChartsOption = {
-    xAxis: {
-      type: 'category',
-      data: ['1', '6', '8', '10', '15', '18', '23'],
-    },
-    yAxis: {
-      type: 'value',
-    },
-    series: [
-      {
-        data: [820, 932, 901, 934, 1290, 1330, 1320],
-        type: 'line',
-      },
-    ],
-    color: [
-      "#1c1c1c",
-    ]
-  };
-  constructor() { }
+  chartOption: EChartsOption = {};
+  constructor(private con:ConService) { }
 
   ngOnInit(): void {
+    this.con.getDataForLineChart().subscribe(data =>{
+      this.chartOption = {
+        xAxis: {
+          type: 'category',
+          data: ['менее 1','от 1 до 3','от 3 до 6','более 6'],
+        },
+        yAxis: {
+          type: 'value',
+        },
+        series: [
+          {
+            data: data.avr_salary,
+            type: 'line',
+          },
+        ],
+        color: [
+          "#1c1c1c",
+        ]
+      }
+    })
   }
 
 }
