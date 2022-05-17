@@ -1,14 +1,13 @@
-
-app-vacancy-info{
-  overflow:overlay;
-  padding:15px 15px 10px 15px;
+app-vacancy-info {
+  overflow: overlay;
+  padding: 15px 15px 10px 15px;
   width: 100%;
-  animation-name: arppeance;
+  animation-name: appearance;
   animation-duration: 100ms;
   animation-fill-mode: forwards;
 }
 
-.review-load{
+.review-load {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,31 +15,31 @@ app-vacancy-info{
   height: 50px;
   border-radius: 5px;
   background-color: #373737;
-  color: #FFFFFF;
+  color: #ffffff;
   animation-name: disappear;
   animation-duration: 2000ms;
   animation-fill-mode: forwards;
 }
-.review-wapper{
+.review-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 100%;
   width: 100%;
-  animation-name: arppeance;
+  animation-name: appearance;
   animation-duration: 300ms;
   animation-fill-mode: forwards;
 }
-.list-wapper {
+.list-wrapper {
   margin: 0;
   padding: 0;
-  overflow-y:overlay;
+  overflow-y: overlay;
   overflow-x: hidden;
-  background-color: #373737; 
+  background-color: #373737;
   width: 21%;
-  &-item{
+  &-item {
     list-style: none;
-    color: #FFFFFF;
+    color: #ffffff;
     font-weight: 200;
     height: 25px;
     line-height: 25px;
@@ -52,26 +51,26 @@ app-vacancy-info{
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-  &-item:hover{
-    background-color: #5E5E5E;
+  &-item:hover {
+    background-color: #5e5e5e;
     cursor: pointer;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 }
-.list-wapper-elseblock{
+.list-wrapper-elseblock {
   margin: 0;
   padding: 0;
-  overflow:overlay;
-  background-color: #373737; 
+  overflow: overlay;
+  background-color: #373737;
   width: 21%;
-  &-item{
+  &-item {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FFFFFF;
-    background-color: #5E5E5E;
+    color: #ffffff;
+    background-color: #5e5e5e;
     animation-name: disappear;
     animation-duration: 2000ms;
     animation-fill-mode: forwards;
@@ -84,23 +83,22 @@ app-vacancy-info{
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: none; 
+  background: none;
 }
-  
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
 
-
-// style of buttn "Загрузить ещё"
-.list-wapper-button{
+// style of button "Загрузить ещё"
+.list-wrapper-button {
   width: 100%;
   height: 25px;
   display: flex;
@@ -114,36 +112,34 @@ app-vacancy-info{
   font-size: 12px;
   padding: 0 10px;
 }
-.list-wapper-button:hover{
-  background-color: #5E5E5E;
+.list-wrapper-button:hover {
+  background-color: #5e5e5e;
   cursor: pointer;
 }
-@keyframes disappear{
-  0%{
+@keyframes disappear {
+  0% {
     opacity: 1;
     transform: rotateX(90deg);
   }
-  50%{
+  50% {
     opacity: 0.5;
     transform: rotateX(0deg);
   }
-  100%{
+  100% {
     display: none;
     opacity: 0;
     transform: rotateX(90deg);
   }
 }
-@keyframes arppeance{
-  0%{
+@keyframes appearance {
+  0% {
     display: none;
     opacity: 0;
   }
-  50%{
+  50% {
     opacity: 0.5;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
-
-

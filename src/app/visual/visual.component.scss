@@ -1,4 +1,4 @@
-.visual-load{
+.visual-load {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,105 +6,105 @@
   height: 50px;
   border-radius: 5px;
   background-color: #373737;
-  color: #FFFFFF;
+  color: #ffffff;
   animation-name: disappear;
   animation-duration: 2000ms;
   animation-fill-mode: forwards;
 }
-.visual-wapper{
+.visual-wrapper {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  grid-template-rows: repeat(8,100px);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 100px);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   animation-name: arppeance;
   animation-duration: 300ms;
   animation-fill-mode: forwards;
-  &-name{
+  &-name {
     grid-column-start: 1;
     grid-column-end: 5;
-    grid-row-start:1 ;
+    grid-row-start: 1;
     grid-row-end: 2;
     display: flex;
     align-items: center;
     padding-left: 10px;
     font-size: 48px;
-    border: 1px solid #C4C4C4;
+    border: 1px solid #c4c4c4;
     box-sizing: border-box;
-    &-item{
+    &-item {
       strong {
         border-right: solid 5px #232828;
         margin-right: 10px;
       }
     }
   }
-  &-infobar-item{
+  &-infobar-item {
     display: flex;
     flex-direction: column;
-    border: 1px solid #C4C4C4;
+    border: 1px solid #c4c4c4;
     justify-content: center;
     align-items: center;
-    &-main{
+    &-main {
       font-size: 24px;
     }
-    &-info{
+    &-info {
       font-size: 10px;
     }
   }
-  &-charts-item{
-      border: 1px solid #C4C4C4;
+  &-charts-item {
+    border: 1px solid #c4c4c4;
   }
 }
-.item{
-  &-1{
+.item {
+  &-1 {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 6;
   }
-  &-2{
+  &-2 {
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 6;
   }
-  &-3{
+  &-3 {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 6;
     grid-row-end: 9;
   }
-  &-4{
+  &-4 {
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 6;
     grid-row-end: 9;
   }
 }
-@keyframes disappear{
-  0%{
+@keyframes disappear {
+  0% {
     opacity: 1;
     transform: rotateX(90deg);
   }
-  50%{
+  50% {
     opacity: 0.5;
     transform: rotateX(0deg);
   }
-  100%{
+  100% {
     display: none;
     opacity: 0;
     transform: rotateX(90deg);
   }
 }
-@keyframes arppeance{
-  0%{
+@keyframes arppeance {
+  0% {
     display: none;
     opacity: 0;
   }
-  50%{
+  50% {
     opacity: 0.5;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }

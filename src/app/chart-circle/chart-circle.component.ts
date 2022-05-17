@@ -5,31 +5,25 @@ import { ConService } from '../con.service';
 @Component({
   selector: 'app-chart-circle',
   templateUrl: './chart-circle.component.html',
-  styleUrls: ['./chart-circle.component.scss']
+  styleUrls: ['./chart-circle.component.scss'],
 })
 export class ChartCircleComponent implements OnInit {
-  chartOption: EChartsOption =  {};
-  constructor(private con:ConService) { }
+  chartOption: EChartsOption = {};
+  constructor(private con: ConService) {}
 
   ngOnInit(): void {
-    this.con.getDataForPieChart().subscribe(data =>{
+    this.con.getDataForPieChart().subscribe((data) => {
       this.chartOption = {
         tooltip: {
-          trigger: 'item'
+          trigger: 'item',
         },
         grid: {
           left: '3%',
           right: '4%',
           bottom: '3%',
-          containLabel: true
+          containLabel: true,
         },
-        color:[
-          "#adadad",
-          "#878787",
-          "#1c1c1c",
-          "#474747",
-          "#333333",
-        ],
+        color: ['#adadad', '#878787', '#1c1c1c', '#474747', '#333333'],
         series: [
           {
             name: 'Данные',
@@ -40,17 +34,16 @@ export class ChartCircleComponent implements OnInit {
               label: {
                 show: true,
                 fontSize: '22',
-                fontWeight: 'bold'
-              }
+                fontWeight: 'bold',
+              },
             },
             labelLine: {
-              show: false
+              show: false,
             },
-            data: data
-          }
-        ]
-      }
-    })
+            data,
+          },
+        ],
+      };
+    });
   }
-
 }

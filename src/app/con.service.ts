@@ -1,36 +1,40 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { BarChart, LineChart, PieChart, Vacancy } from './interfaces';
-import { PrewInfo } from './interfaces';
+import { PreviewInfo } from './interfaces';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ConService {
-
-  constructor(private http: HttpClient) { }
-  getData(){
-    let url = 'http://api.utmn.su/api/vacancies';
-    return this.http.get<Vacancy[]>(url);
+  constructor(private http: HttpClient) {}
+  getData() {
+    return this.http.get<Vacancy[]>(`${environment.apiUrl}api/vacancies`);
   }
   getMoreData(value: number) {
-    let url = 'https://api.utmn.su/api/vacancies/?offset=' + value;
-    return this.http.get<Vacancy[]>(url);
+    return this.http.get<Vacancy[]>(
+      `${environment.apiUrl}api/vacancies?offset=${value}`
+    );
   }
-  getDataForPieChart(){
-    let url = "http://api.utmn.su/api/charts/skills_demand/?limit=9";
-    return this.http.get<PieChart[]>(url);
+  getDataForPieChart() {
+    return this.http.get<PieChart[]>(
+      `${environment.apiUrl}api/charts/skills_demand?limit=9`
+    );
   }
-  getDataForBarChart(){
-    let url = "http://api.utmn.su/api/charts/skills_salary";
-    return this.http.get<BarChart>(url);
+  getDataForBarChart() {
+    return this.http.get<BarChart>(
+      `${environment.apiUrl}api/charts/skills_salary`
+    );
   }
-  getDataForLineChart(){
-    let url = "http://api.utmn.su/api/charts/experience_salary";
-    return this.http.get<LineChart>(url);
+  getDataForLineChart() {
+    return this.http.get<LineChart>(
+      `${environment.apiUrl}api/charts/experience_salary`
+    );
   }
-  getDataForPreviewInfo(){
-    let url = "http://api.utmn.su/api/charts/preview_info";
-    return this.http.get<PrewInfo>(url);
+  getDataForPreviewInfo() {
+    return this.http.get<PreviewInfo>(
+      `${environment.apiUrl}api/charts/preview_info`
+    );
   }
 }

@@ -4,19 +4,18 @@ import { ConService } from '../con.service';
 @Component({
   selector: 'app-chart-line',
   templateUrl: './chart-line.component.html',
-  styleUrls: ['./chart-line.component.scss']
+  styleUrls: ['./chart-line.component.scss'],
 })
 export class ChartLineComponent implements OnInit {
-
   chartOption: EChartsOption = {};
-  constructor(private con:ConService) { }
+  constructor(private con: ConService) {}
 
   ngOnInit(): void {
-    this.con.getDataForLineChart().subscribe(data =>{
+    this.con.getDataForLineChart().subscribe((data) => {
       this.chartOption = {
         xAxis: {
           type: 'category',
-          data: ['менее 1','от 1 до 3','от 3 до 6','более 6'],
+          data: ['менее 1', 'от 1 до 3', 'от 3 до 6', 'более 6'],
         },
         yAxis: {
           type: 'value',
@@ -25,7 +24,7 @@ export class ChartLineComponent implements OnInit {
           left: '3%',
           right: '4%',
           bottom: '3%',
-          containLabel: true
+          containLabel: true,
         },
         series: [
           {
@@ -33,11 +32,8 @@ export class ChartLineComponent implements OnInit {
             type: 'line',
           },
         ],
-        color: [
-          "#1c1c1c",
-        ]
-      }
-    })
+        color: ['#1c1c1c'],
+      };
+    });
   }
-
 }

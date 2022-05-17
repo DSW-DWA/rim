@@ -1,28 +1,52 @@
-<div class="visual-load" *ngIf="condit; else elseblock">Загрузка...</div>
+<div class="visual-load" *ngIf="condition; else elseblock">Загрузка...</div>
 <ng-template #elseblock>
-    <div class="visual-wapper">
-        <div class="visual-wapper-name">
-            <div class="visual-wapper-name-item"><strong>Backend </strong> Work stats</div>
-        </div>
-        <div class="visual-wapper-infobar-item">
-                <div class="visual-wapper-infobar-item-main">{{mainInfo.average_salary}}₽</div>
-                <div class="visual-wapper-infobar-item-info">Средняя зп по России</div>
-        </div>
-        <div class="visual-wapper-infobar-item">
-                <div class="visual-wapper-infobar-item-main">{{mainInfo.average_exp}}</div>
-                <div class="visual-wapper-infobar-item-info">Самый востребованный стаж</div>
-        </div>
-        <div class="visual-wapper-infobar-item">
-                <div class="visual-wapper-infobar-item-main">{{mainInfo.average_skills_names}}</div>
-                <div class="visual-wapper-infobar-item-info">Самые популярные навыки</div>
-        </div>
-        <div class="visual-wapper-infobar-item">
-                <div class="visual-wapper-infobar-item-main">{{mainInfo.average_skills_len}}</div>
-                <div class="visual-wapper-infobar-item-info">Среднее количество навыков</div>
-        </div>
-        <div class="visual-wapper-charts-item item-1"><app-chart-bar-first></app-chart-bar-first></div>
-        <div class="visual-wapper-charts-item item-2"><app-chart-circle></app-chart-circle></div>
-        <div class="visual-wapper-charts-item item-3"><app-chart-map></app-chart-map></div>
-        <div class="visual-wapper-charts-item item-4"><app-chart-line></app-chart-line></div>
+  <div class="visual-wrapper">
+    <div class="visual-wrapper-name">
+      <div class="visual-wrapper-name-item">
+        <strong>Backend </strong> Work stats
+      </div>
     </div>
+    <div class="visual-wrapper-infobar-item">
+      <div class="visual-wrapper-infobar-item-main">
+        {{ mainInfo.average_salary }}₽
+      </div>
+      <div class="visual-wrapper-infobar-item-info">Средняя зп по России</div>
+    </div>
+    <div class="visual-wrapper-infobar-item">
+      <div class="visual-wrapper-infobar-item-main">
+        {{ mainInfo.average_exp }}
+      </div>
+      <div class="visual-wrapper-infobar-item-info">
+        Самый востребованный стаж
+      </div>
+    </div>
+    <div class="visual-wrapper-infobar-item">
+      <div class="visual-wrapper-infobar-item-main">
+        {{ mainInfo.average_skills_names }}
+      </div>
+      <div class="visual-wrapper-infobar-item-info">
+        Самые популярные навыки
+      </div>
+    </div>
+    <div class="visual-wrapper-infobar-item">
+      <div class="visual-wrapper-infobar-item-main">
+        {{ mainInfo.average_skills_len }}
+      </div>
+      <div class="visual-wrapper-infobar-item-info">
+        Среднее количество навыков
+      </div>
+    </div>
+    <div class="visual-wrapper-charts-item item-1">
+      <app-chart-bar-first></app-chart-bar-first>
+    </div>
+    <div class="visual-wrapper-charts-item item-2">
+      <app-chart-circle></app-chart-circle>
+    </div>
+    <div class="visual-wrapper-charts-item item-3">
+      <app-chart-map></app-chart-map>
+    </div>
+    <div class="visual-wrapper-charts-item item-4">
+      <app-chart-line></app-chart-line>
+    </div>
+  </div>
 </ng-template>

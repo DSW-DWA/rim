@@ -1,23 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { ConService } from '../con.service';
-import { PrewInfo } from '../interfaces';
+import { PreviewInfo } from '../interfaces';
 
 @Component({
   selector: 'app-visual',
   templateUrl: './visual.component.html',
-  styleUrls: ['./visual.component.scss']
+  styleUrls: ['./visual.component.scss'],
 })
 export class VisualComponent implements OnInit {
-  condit: boolean = true;
-  mainInfo!: PrewInfo;
+  condition: boolean = true;
+  mainInfo!: PreviewInfo;
 
-  constructor(private con:ConService) { }
+  constructor(private con: ConService) {}
 
   ngOnInit(): void {
-    this.con.getDataForPreviewInfo().subscribe(data =>{
+    this.con.getDataForPreviewInfo().subscribe((data) => {
       this.mainInfo = data;
-    })
-    setTimeout(() => {this.condit = false} , 2000);
+      this.condition = false;
+    });
   }
-
 }

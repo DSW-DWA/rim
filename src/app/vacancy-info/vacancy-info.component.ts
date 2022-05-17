@@ -1,24 +1,19 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Vacancy } from '../interfaces';
 
 @Component({
   selector: 'app-vacancy-info',
   templateUrl: './vacancy-info.component.html',
-  styleUrls: ['./vacancy-info.component.scss']
+  styleUrls: ['./vacancy-info.component.scss'],
 })
-export class VacancyInfoComponent implements OnInit {
+export class VacancyInfoComponent {
   @Input() showItem!: Vacancy;
-  salar(item: Vacancy){
-    if (item.salary == null) return "Не указана";
-    else return item.salary;
+
+  salary(item: Vacancy) {
+    return item.salary || 'Не указана';
   }
-  check(item: Vacancy){
-    let tmp: number = item.key_skills.length; 
-    return tmp != 0;
+
+  check(item: Vacancy) {
+    return item.key_skills.length !== 0;
   }
-  constructor() {
-  }
-  ngOnInit(): void {
-  }
-  
 }

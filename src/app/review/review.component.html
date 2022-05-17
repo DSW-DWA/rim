@@ -1,15 +1,27 @@
-<div class="review-load" *ngIf="condit; else elseblock">Загрузка...</div>
+<div class="review-load" *ngIf="condition; else elseblock">Загрузка...</div>
 <ng-template #elseblock>
-    <div class="review-wapper" >
-        <ul class="list-wapper" *ngIf="uploadCondit; else elseblock">
-            <li class="list-wapper-item {{i}} clamp" *ngFor = "let vacan of vacancies; index as i" (click)="RetItem(vacan,i)" [ngStyle]="{'background-color':check(i) ? bgColor: '', 'filate':check(i) ? shadow: ''}">{{vacan.name}}</li>
-            <button class="list-wapper-button" (click)="adData()">Загрузить ещё</button>
-        </ul>
-        <ng-template #elseblock>
-            <div class="list-wapper-elseblock">
-                <div class="list-wapper-elseblock-item">Обновление списка...</div>
-            </div>
-        </ng-template>
-        <app-vacancy-info [showItem]="showItem" ></app-vacancy-info>
-    </div>
+  <div class="review-wrapper">
+    <ul class="list-wrapper" *ngIf="uploadCondition; else elseblock">
+      <li
+        class="list-wrapper-item {{ i }} clamp"
+        *ngFor="let vacancy of vacancies; index as i"
+        (click)="RetItem(vacancy, i)"
+        [ngStyle]="{
+          'background-color': check(i) ? bgColor : '',
+          filter: check(i) ? shadow : ''
+        }"
+      >
+        {{ vacancy.name }}
+      </li>
+      <button class="list-wrapper-button" (click)="addData()">
+        Загрузить ещё
+      </button>
+    </ul>
+    <ng-template #elseblock>
+      <div class="list-wrapper-elseblock">
+        <div class="list-wrapper-elseblock-item">Обновление списка...</div>
+      </div>
+    </ng-template>
+    <app-vacancy-info [showItem]="showItem"></app-vacancy-info>
+  </div>
 </ng-template>
