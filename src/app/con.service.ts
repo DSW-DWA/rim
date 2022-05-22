@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { BarChart, LineChart, PieChart, Vacancy } from './interfaces';
+import { Area, BarChart, LineChart, PieChart, Vacancy } from './interfaces';
 import { PreviewInfo } from './interfaces';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
   providedIn: 'root',
@@ -36,5 +36,10 @@ export class ConService {
     return this.http.get<PreviewInfo>(
       `${environment.apiUrl}api/charts/preview_info`
     );
+  }
+  getDataForArea(){
+    return this.http.get<Area[]>(
+      `${environment.apiUrl}api/areas`
+    )
   }
 }

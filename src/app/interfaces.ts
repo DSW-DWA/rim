@@ -27,3 +27,11 @@ export interface PieChart {
   name: string;
   value: number;
 }
+export interface Area {
+  city: {
+    code: string,
+    region: string
+  },
+  cnt: number,
+  color: string
+}
