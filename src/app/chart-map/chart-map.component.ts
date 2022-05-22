@@ -30,6 +30,10 @@ export class ChartMapComponent implements OnInit {
       else return "неизвестно"
   }
   clr(id: number){
-
+    let clr: string ="";
+    this.Data.forEach(element =>{
+      if (Number(element.city.code) == id) clr = clr + element.color;
+    });
+    return clr;
   }
 }
