@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment.prod';
   providedIn: 'root',
 })
 export class ConService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
   getData() {
     return this.http.get<Vacancy[]>(`${environment.apiUrl}api/vacancies`);
   }
@@ -37,7 +37,7 @@ export class ConService {
       `${environment.apiUrl}api/charts/preview_info`
     );
   }
-  getDataForArea(){
+  getDataForArea() {
     return this.http.get<Area[]>(
       `${environment.apiUrl}api/areas`
     )

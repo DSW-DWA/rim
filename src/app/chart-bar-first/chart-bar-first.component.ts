@@ -9,7 +9,7 @@ import { ConService } from '../con.service';
 })
 export class ChartBarFirstComponent implements OnInit {
   chartOption: EChartsOption = {};
-  constructor(private con: ConService) {}
+  constructor(private con: ConService) { }
 
   ngOnInit(): void {
     this.con.getDataForBarChart().subscribe((data) => {
@@ -34,7 +34,7 @@ export class ChartBarFirstComponent implements OnInit {
             type: 'bar',
           },
         ],
-        color: ['#474747'],
+        color: ['#6872D0'],
       };
     });
   }

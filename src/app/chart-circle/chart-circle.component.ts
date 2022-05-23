@@ -9,7 +9,7 @@ import { ConService } from '../con.service';
 })
 export class ChartCircleComponent implements OnInit {
   chartOption: EChartsOption = {};
-  constructor(private con: ConService) {}
+  constructor(private con: ConService) { }
 
   ngOnInit(): void {
     this.con.getDataForPieChart().subscribe((data) => {
@@ -23,7 +23,7 @@ export class ChartCircleComponent implements OnInit {
           bottom: '3%',
           containLabel: true,
         },
-        color: ['#adadad', '#878787', '#1c1c1c', '#474747', '#333333'],
+        color: ['#3c7af0', '#2d6feb', '#3876eb', '#1556d1', '#0958ed'],
         series: [
           {
             name: 'Данные',

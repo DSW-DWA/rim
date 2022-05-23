@@ -8,7 +8,7 @@ import { ConService } from '../con.service';
 })
 export class ChartLineComponent implements OnInit {
   chartOption: EChartsOption = {};
-  constructor(private con: ConService) {}
+  constructor(private con: ConService) { }
 
   ngOnInit(): void {
     this.con.getDataForLineChart().subscribe((data) => {
@@ -32,7 +32,7 @@ export class ChartLineComponent implements OnInit {
             type: 'line',
           },
         ],
-        color: ['#1c1c1c'],
+        color: ['#5967E8'],
       };
     });
   }

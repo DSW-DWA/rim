@@ -11,11 +11,11 @@ import { Vacancy } from '../interfaces';
 export class ReviewComponent implements OnInit {
   vacancies!: Vacancy[];
   choseItem: number = 0;
-  bgColor: string = '#5E5E5E';
+  bgColor: string = '#4c5ad1';
   uploadCondition: boolean = true;
   shadow: string = 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))';
 
-  constructor(private con: ConService) {}
+  constructor(private con: ConService) { }
 
   showItem!: Vacancy;
   condition: boolean = true;

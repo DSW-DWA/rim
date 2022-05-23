@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
   }
+
   &-salary {
     height: 29px;
     font-style: normal;
@@ -14,6 +15,7 @@
     font-size: 16px;
     line-height: 19px;
   }
+
   &-ext_inf {
     height: 31px;
     font-style: normal;
@@ -21,20 +23,24 @@
     font-size: 12px;
     line-height: 15px;
   }
+
   &-description {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;
   }
+
   &-key_skills {
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
+
     &-wrapper {
       display: flex;
       flex-wrap: wrap;
     }
+
     &-item {
       display: flex;
       justify-content: center;
@@ -42,19 +48,23 @@
       border-radius: 5px;
       margin: 5px;
       padding: 5px 8px;
-      background: #ececec;
+      background: #e6f1ff;
     }
   }
 }
+
 a {
   text-decoration: none;
 }
+
 a:link {
-  color: black;
+  color: rgb(45, 58, 172);
 }
+
 a:visited {
-  color: #6d6565;
+  color: #f10000;
 }
+
 a:focus {
   background: #c6ccc1;
 }
