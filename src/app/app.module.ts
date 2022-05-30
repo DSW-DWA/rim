@@ -22,8 +22,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { TitleComponent } from './title/title.component';
 
 const appRoutes: Routes = [
+  {path: '', component: TitleComponent},
   {path: 'review', component: ReviewComponent},
   {path: 'visual', component: VisualComponent},
   {path: 'table', component: TableComponent}
@@ -41,6 +43,7 @@ const appRoutes: Routes = [
     ChartLineComponent,
     ChartMapComponent,
     TableComponent,
+    TitleComponent,
   ],
   imports: [
     BrowserModule,
