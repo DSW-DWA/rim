@@ -32,7 +32,11 @@ export class ChartLineComponent implements OnInit {
             type: 'line',
           },
         ],
-        color: ['#1c1c1c'],
+        color: [
+          "#2C326A",
+          "#393F7A",
+          "#0E1343"
+        ],
       };
     });
   }

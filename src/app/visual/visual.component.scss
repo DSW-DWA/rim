@@ -1,3 +1,10 @@
+.visual-load-wapper{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .visual-load {
   display: flex;
   justify-content: center;
@@ -5,7 +12,7 @@
   width: 100px;
   height: 50px;
   border-radius: 5px;
-  background-color: #373737;
+  background-color: #6890DC;
   color: #ffffff;
   animation-name: disappear;
   animation-duration: 2000ms;
@@ -32,8 +39,10 @@
     border: 1px solid #c4c4c4;
     box-sizing: border-box;
     &-item {
+      color: #5967E8;
       strong {
-        border-right: solid 5px #232828;
+        color: #6890DC;
+        border-right: solid 5px #5967E8;
         margin-right: 10px;
       }
     }
@@ -41,18 +50,20 @@
   &-infobar-item {
     display: flex;
     flex-direction: column;
-    border: 1px solid #c4c4c4;
+    border: 1px solid #5967E8;
     justify-content: center;
     align-items: center;
     &-main {
       font-size: 24px;
+      color: #393F7A;
     }
     &-info {
       font-size: 10px;
+      color: #585E97;
     }
   }
   &-charts-item {
-    border: 1px solid #c4c4c4;
+    border: 1px solid #5967E8;
   }
 }
 .item {

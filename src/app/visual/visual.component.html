@@ -1,4 +1,6 @@
-<div class="visual-load" *ngIf="condition; else elseblock">Загрузка...</div>
+<div class="visual-load-wapper" *ngIf="condition; else elseblock">
+  <div class="visual-load">Загрузка...</div>
+</div>
 <ng-template #elseblock>
   <div class="visual-wrapper">
     <div class="visual-wrapper-name">

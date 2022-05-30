@@ -1,3 +1,18 @@
-<button routerLink="review">Обзор</button>
-<button routerLink="visual">Визуализация</button>
-<button routerLink="table">Общая информация</button>
+<button class="item" routerLink="review" (click)="retItem(1)"
+[ngStyle]="{
+    'background-color': check(1) ? bgColor : '',
+    filter: check(1) ? shadow : ''
+  }"
+>Обзор</button>
+<button class="item" routerLink="visual" (click)="retItem(2)"
+[ngStyle]="{
+    'background-color': check(2) ? bgColor : '',
+    filter: check(2) ? shadow : ''
+  }"
+>Визуализация</button>
+<button class="item" routerLink="table" (click)="retItem(3)"
+[ngStyle]="{
+    'background-color': check(3) ? bgColor : '',
+    filter: check(3) ? shadow : ''
+  }"
+>Общая информация</button>

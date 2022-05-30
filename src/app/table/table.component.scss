@@ -1,18 +1,39 @@
+.table-load-wapper{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-load {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #373737;
+  color: #ffffff;
+  animation-name: disappear;
+  animation-duration: 2000ms;
+  animation-fill-mode: forwards;
+}
+
 table {
   width: 100%;
 }
 
-.mat-form-field {
+/*.mat-form-field {
   font-size: 14px;
-  width: 100%;
-}
+  width: 70%;
+} */
 .mat-column-name {
   text-align: center;
-  width: 20%;
+  width: 15%;
 }
 .mat-column-area {
   text-align: center;
-  width: 20%;
+  width: 15%;
 }
 .mat-column-salary {
   text-align: center;
@@ -20,9 +41,24 @@ table {
 }
 .mat-column-experience {
   text-align: center;
-  width: 20%;
+  width: 30%;
 }
 .mat-column-key_skills {
   text-align: center;
   width: 20%;
+}
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    transform: rotateX(90deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: rotateX(0deg);
+  }
+  100% {
+    display: none;
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
 }

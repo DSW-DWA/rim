@@ -14,7 +14,7 @@ app-vacancy-info {
   width: 100px;
   height: 50px;
   border-radius: 5px;
-  background-color: #373737;
+  background-color: #5967E8;
   color: #ffffff;
   animation-name: disappear;
   animation-duration: 2000ms;
@@ -35,7 +35,7 @@ app-vacancy-info {
   padding: 0;
   overflow-y: overlay;
   overflow-x: hidden;
-  background-color: #373737;
+  background-color: #6890DC;
   width: 21%;
   &-item {
     list-style: none;
@@ -52,7 +52,7 @@ app-vacancy-info {
     text-overflow: ellipsis;
   }
   &-item:hover {
-    background-color: #5e5e5e;
+    background-color: #5967E8;
     cursor: pointer;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
@@ -61,7 +61,7 @@ app-vacancy-info {
   margin: 0;
   padding: 0;
   overflow: overlay;
-  background-color: #373737;
+  background-color: #6890DC;
   width: 21%;
   &-item {
     width: 100%;
@@ -70,7 +70,7 @@ app-vacancy-info {
     justify-content: center;
     align-items: center;
     color: #ffffff;
-    background-color: #5e5e5e;
+    background-color: #5967E8;
     animation-name: disappear;
     animation-duration: 2000ms;
     animation-fill-mode: forwards;
@@ -104,7 +104,7 @@ app-vacancy-info {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #373737;
+  background-color: #6890DC;
   border: none;
   color: white;
   text-align: start;
@@ -113,7 +113,7 @@ app-vacancy-info {
   padding: 0 10px;
 }
 .list-wrapper-button:hover {
-  background-color: #5e5e5e;
+  background-color: #5967E8;
   cursor: pointer;
 }
 @keyframes disappear {

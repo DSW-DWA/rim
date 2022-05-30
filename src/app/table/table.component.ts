@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { ConService } from '../con.service';
 import { Vacancy } from '../interfaces';
-
+import { environment } from 'src/environments/environment.prod';
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -24,6 +24,9 @@ export class TableComponent implements OnInit {
 
   constructor(private con: ConService) {}
 
+  apiUrl: string = environment.apiUrl +"/files/download_data";
+
+  condition: boolean = true;
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -36,6 +39,7 @@ export class TableComponent implements OnInit {
         delete this.ELEMENT_DATA[this.ELEMENT_DATA.indexOf(el)].description;
         delete this.ELEMENT_DATA[this.ELEMENT_DATA.indexOf(el)].id;
         delete this.ELEMENT_DATA[this.ELEMENT_DATA.indexOf(el)].alternate_url;
+        this.condition = false
       });
       this.displayedColumns = [
         'name',

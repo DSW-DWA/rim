@@ -11,7 +11,7 @@ import { Vacancy } from '../interfaces';
 export class ReviewComponent implements OnInit {
   vacancies!: Vacancy[];
   choseItem: number = 0;
-  bgColor: string = '#5E5E5E';
+  bgColor: string = '#5967E8';
   uploadCondition: boolean = true;
   shadow: string = 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))';
 
@@ -19,6 +19,7 @@ export class ReviewComponent implements OnInit {
 
   showItem!: Vacancy;
   condition: boolean = true;
+  
   //return Vacancy and index
   RetItem(item: Vacancy, i: number) {
     this.showItem = item;
@@ -33,8 +34,8 @@ export class ReviewComponent implements OnInit {
     this.con.getData().subscribe((data) => {
       this.vacancies = data;
       this.showItem = this.vacancies[0];
+      this.condition = false;
     });
-    this.condition = false;
   }
   // upload data if you pres the btn
   addData() {

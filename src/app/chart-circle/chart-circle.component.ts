@@ -23,7 +23,18 @@ export class ChartCircleComponent implements OnInit {
           bottom: '3%',
           containLabel: true,
         },
-        color: ['#adadad', '#878787', '#1c1c1c', '#474747', '#333333'],
+        color: [
+          "#D5D8F2",
+          "#959BD0",
+          "#AAAED3",
+          "#979AC6",
+          "#6F739A",
+          "#4C5285",
+          "#565B86",
+          "#2C326A",
+          "#393F7A",
+          "#0E1343"
+      ],
         series: [
           {
             name: 'Данные',

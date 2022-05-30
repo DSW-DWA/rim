@@ -34,7 +34,7 @@ export class ChartBarFirstComponent implements OnInit {
             type: 'bar',
           },
         ],
-        color: ['#474747'],
+        color: ['#92A9D4'],
       };
     });
   }
