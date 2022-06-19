@@ -24,7 +24,7 @@ export class TableComponent implements OnInit {
 
   constructor(private con: ConService) {}
 
-  apiUrl: string = environment.apiUrl +"/files/download_data";
+  apiUrl: string = environment.apiUrl +"api/files/download_data";
 
   condition: boolean = true;
   applyFilter(event: Event) {

@@ -18,7 +18,15 @@
   animation-duration: 2000ms;
   animation-fill-mode: forwards;
 }
-
+.table-searh_load{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 5%;
+  &-form{
+    width: 100%;
+  }
+}
 table {
   width: 100%;
 }

@@ -3,17 +3,18 @@
   <div class="table-load" >Загрузка...</div>
 </div>
 <ng-template #elseblock>
-  <mat-form-field appearance="standard">
-    <mat-label>Поиск любого значения</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="значение" #input />
-  </mat-form-field>
+  <div class="table-searh_load">
+    <mat-form-field appearance="standard" class="table-searh_load-form">
+      <mat-label>Поиск любого значения</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="значение" #input />
+    </mat-form-field>
 
-  <a href="{{apiUrl}}">
-    <button>
-      Загрузить
-    </button>
-  </a>
-
+    <a href="{{apiUrl}}">
+      <button mat-raised-button color="primary">
+        Загрузить
+      </button>
+    </a>
+  </div>
   
   <table
     mat-table

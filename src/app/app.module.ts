@@ -23,6 +23,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { TitleComponent } from './title/title.component';
+import {MatButtonModule} from '@angular/material/button';
 
 const appRoutes: Routes = [
   {path: '', component: TitleComponent},
@@ -57,7 +58,8 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     MatCardModule,
     MatInputModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
