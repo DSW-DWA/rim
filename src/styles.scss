@@ -380,8 +380,9 @@ app-visual {
 }
 app-table {
   width: 100%;
-  overflow: overlay;
-  padding: 0 0 10px 0;
+  overflow-y: overlay;
+  overflow-x: hidden;
+  padding: 0 10px 10px 10px;
 }
 app-title{
   width: 100%;

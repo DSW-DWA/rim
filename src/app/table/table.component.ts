@@ -51,4 +51,18 @@ export class TableComponent implements OnInit {
       this.dataSource = new MatTableDataSource(this.ELEMENT_DATA);
     });
   }
+  addData(){
+    this.condition = true;
+    this.con.getMoreData(this.ELEMENT_DATA.length).subscribe((data) => {
+      this.ELEMENT_DATA = [...this.ELEMENT_DATA, ...Object.values(data)];
+      this.ELEMENT_DATA.forEach((el) => {
+        delete this.ELEMENT_DATA[this.ELEMENT_DATA.indexOf(el)].description;
+        delete this.ELEMENT_DATA[this.ELEMENT_DATA.indexOf(el)].id;
+        delete this.ELEMENT_DATA[this.ELEMENT_DATA.indexOf(el)].alternate_url;
+      });
+      this.dataSource = new MatTableDataSource(this.ELEMENT_DATA);
+      this.condition = false;
+    });
+  }
+
 }
